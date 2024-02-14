@@ -29,7 +29,7 @@ public class Solution {
 				j++;
 			}
 
-			int incrementNumber = i; //It is equal to row number
+			int incrementNumber = i; //Initialising to start print from row number
 			while(j <= input){
 				//print remaining n*n items starting with row num
 				System.out.print(incrementNumber);
