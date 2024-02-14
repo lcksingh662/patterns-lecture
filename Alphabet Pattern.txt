@@ -1,0 +1,27 @@
+// Print the following pattern for the given N number of rows.
+
+// Pattern for N = 3
+// AAA
+// BBB
+// CCC
+
+import java.util.Scanner;
+
+public class Solution 
+{
+	public static void main(String[] args) {
+	 // write your code logic here !!
+		Scanner sc = new Scanner(System.in);
+		int input = sc.nextInt();
+		sc.close();
+
+		for(int i = 1; i <= input; i++){
+			//ith row
+			for(int j = 1; j<= input; j++){
+				char jthChar = (char)('A' + i - 1);
+				System.out.print(jthChar);
+			}
+			System.out.println();
+		}
+    }
+}
