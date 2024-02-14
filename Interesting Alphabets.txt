@@ -1,0 +1,29 @@
+// Print the following pattern for the given number of rows.
+
+// Pattern for N = 5
+// E
+// DE
+// CDE
+// BCDE
+// ABCDE
+
+import java.util.Scanner;
+
+public class Solution {
+	public static void main(String[] args) {
+		//Your code goes here
+		java.util.Scanner sc = new Scanner(System.in);
+		int input = sc.nextInt();
+		sc.close();
+
+		for(int i = 1; i <= input; i++){
+			//ith row
+			char output = (char)('A' + input - i);
+			for(int j = 1; j <= i; j++){
+				System.out.print(output);
+				output = (char) (output + 1);
+			}
+			System.out.println();
+		}
+	}
+}
