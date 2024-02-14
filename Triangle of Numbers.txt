@@ -1,0 +1,53 @@
+// Print the following pattern for the given number of rows.
+
+// Pattern for N = 4
+//    1
+//   232
+//  34543
+// 4567654
+
+import java.util.Scanner;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		/* Your class should be named Solution.
+	 	* Read input as specified in the question.
+	 	* Print output as specified in the question.
+		*/
+		Scanner sc = new Scanner(System.in);
+		int input = sc.nextInt();
+		sc.close();
+
+		int i = 1; //row count
+
+		while(i <= input){
+			int j = 1;
+			int spaces = input - i;
+			while(j <= spaces){
+				System.out.print(" ");
+				j++;
+			}
+
+			int incrementNumber = i; //It is equal to row number
+			while(j <= input){
+				//print remaining n*n items starting with row num
+				System.out.print(incrementNumber);
+				incrementNumber++;
+				j++;
+			}
+			//decrementing by 2 for next lower number from previous output
+			incrementNumber -= 2;
+
+			while(incrementNumber >= i){
+				//print remaining in decreasing order till row number
+				System.out.print(incrementNumber);
+				incrementNumber--;
+			}
+
+			i++;
+
+			System.out.println();
+		}
+	}
+}
